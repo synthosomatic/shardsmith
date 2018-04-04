@@ -1,0 +1,164 @@
+@font-face {
+	font-family:"Eorzea";
+	src:url('/fonts/Eorzea.ttf');
+}
+
+a {
+	color:#fff;
+	text-decoration:none;
+}
+
+input,button {
+	color:#000;
+}
+
+input[type="text"] {
+	background:#000;
+	color:#9C9ACF;
+	width:12em;
+}
+
+body {
+	background:#100C14 url("https://s3.amazonaws.com/www.shardsmith.com/images/dragonskin.png") repeat fixed;
+	display:flex;
+	height:100vh;
+	flex-direction:column;
+	font-family:"Meiryo",sans-serif;
+	text-align:center;
+}
+
+header,footer {
+	background:linear-gradient(rgba(0,0,0,0),rgba(29,27,34,1)),linear-gradient(to right,#1D1B22,#413F52,#1D1B22);
+	border:3px solid transparent;
+	border-image:linear-gradient(to right,#31303E,#BAAA78,#463E3A);
+	border-image-slice:1;
+	border-left:0px solid #000;
+	border-right:0px solid #000;
+	color:#9C9ACF;
+	flex-shrink:0;
+	padding: 5px;
+	text-shadow:0 0 2px #000,0 0 25px #0000FF,0 0 5px #2A2952;
+/*	visibility: hidden; */
+}
+
+header {
+	box-shadow:0 5px 20px #000;
+
+	nav {
+		align-items:center;
+		display:flex;
+		flex-direction:row;
+		justify-content:space-between;
+
+		h1 {
+			font-size:1em;
+			margin:0;
+			padding:0;
+		}
+
+		li {
+			display:inline-block;
+
+			&:after {
+			content:"\00B7";
+			}
+
+			&:last-of-type:after {
+			content:none;
+			}
+
+			a {
+				color:#9C9ACF;
+				text-shadow:0 0 2px #000,0 0 25px #0000FF,0 0 5px #2A2952;
+			}
+
+			a:hover {
+				color: #FFF000;
+			}
+		}
+
+
+	}
+}
+
+footer {
+	box-shadow:0 -2px 15px #000;
+	color:#9C9ACF;
+}
+
+main {
+	display:flex;
+	flex:1 0 auto;
+	flex-direction:row;
+
+	form {
+		color:#fff;
+	}
+}
+
+#careers {
+	display:flex;
+	flex-direction:column;
+}
+
+#careerdata {
+	color:#fff;
+	flex-grow:1;
+	text-shadow:1px 1px 1px #000;
+}
+
+.hide {
+	display:none;
+}
+
+table {
+	background:#333;
+	border-collapse:collapse;
+	margin:auto;
+}
+
+tr.list table {
+	width:100%;
+}
+
+td {
+	border:1px solid #000;
+
+	&.icon {
+		width:42px;
+
+		img {
+			height:42px;
+			vertical-align:bottom;
+			width:42px;
+		}
+	}
+
+	&.White {
+		color:#f3f3f3 !important;
+	}
+
+	&.Green {
+		color:#c0ffc0 !important;
+	}
+
+	&.Blue {
+		color:#5990ff !important;
+	}
+
+	&.Pink {
+		color:#d789b6 !important;
+	}
+
+	&.Yellow {
+		color:#e5dd7e !important;
+	}
+
+	&.Orange {
+		color:#ffa666 !important;
+	}
+
+	&.Purple {
+		color:#b38cff !important;
+	}
+}
