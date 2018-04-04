@@ -1,0 +1,52 @@
+<?php
+
+header('Content-Type: application/json; charset=UTF-8');
+
+	if (isset($_GET['career'])) {
+
+		require_once 'config.php';
+
+		$query = $dbconnect->prepare("select * from jobs where Category = :category");
+		$query->bindParam(':category', $category);
+		$category = $_GET['career'];
+		$query->execute();
+		
+		$jsonData = $query->fetchAll(PDO::FETCH_ASSOC);
+		
+//		while ($result = $query->fetchAll(PDO::FETCH_ASSOC)) {
+		
+//			$jsonData[] = $result;
+		
+//		}
+
+		echo json_encode($jsonData);
+
+		$dbconnect = null;
+
+		return;
+
+	} else {
+	
+		echo 'No career data found.'; 
+		
+	};
+
+//	if (isset($_GET['job'])) {
+
+//		require_once 'config.php';
+
+//		$query = $dbconnect->prepare("select * from user_career_crafting join recipes on user_career_crafting.Recipe = recipes.Recipe join categories on recipes.Category = categories.Category where recipes.Job = '" . $_GET['job'] . "' and user_career_crafting.Username = 'zen'");
+
+//		$query->execute();
+
+//		$result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+//		echo json_encode($result);
+
+//		$dbconnect = null;
+
+//		return;
+
+//	};
+
+?>
