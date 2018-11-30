@@ -13,7 +13,7 @@ $key = "c01f6d205597419db64dd68c";
 
 $jsonData = file_get_contents("https://xivapi.com/Item/2?columns=LevelItem,ItemUICategory.Name,Name&key=".$key);
 
-$items = json_decode($jsonData);
+$items = json_decode($jsonData, true);
 
 foreach($items as $item){
 	
