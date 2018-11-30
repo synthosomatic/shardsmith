@@ -15,6 +15,8 @@ $jsonData = file_get_contents("https://xivapi.com/Item/2?columns=LevelItem,ItemU
 
 $items = json_decode($jsonData, true);
 
+var_dump($items);
+
 foreach($items as $item){
 	
 	echo $item;
