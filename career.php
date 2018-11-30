@@ -17,15 +17,15 @@ $items = json_decode($jsonData, true);
 
 var_dump($items);
 
-foreach($items as $item){
+//foreach($items->data as $item){
 	
-	echo $item;
+	//echo $item;
 
 	//$image_url = 'https://storage.cloud.google.com/manasmith-221002.appspot.com/images/adventurers/icons/'.$adventurer['id'].'_'.$adventurer['variation'].'.png';
 	
 	//echo '<table class="adventurer '.$adventurer['element'].' rank'.$adventurer['newrank'].' collected'.$adventurer['collected'].'"><tr class="header"><th>'.$adventurer['name'].'</th></tr><tr class="icon"><td style="background: url(\''.$image_url.'\') no-repeat center"></td></tr></table>';
 
-}
+//}
 	
 ?>
 
