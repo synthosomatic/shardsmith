@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css" media="all"/>
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen"/>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="functions.js"</script>
+	<!--<script type="text/javascript" src="functions.js"></script>-->
 	<script src="https://img.finalfantasyxiv.com/lds/pc/global/js/eorzeadb/loader.js?v1"></script>
 	<!-- JQuery-friendly script courtesy of https://www.reddit.com/r/ffxiv/comments/38l8fu/dynamic_fankit_tooltip_problems/ -->
 	<script>
@@ -66,10 +66,10 @@
 				<a href="/">Home</a>
 			</li>
 			<li>
-				<a href="career.php">Career</a>
+				<a href="/career/">Career</a>
 			</li>
 			<li>
-				<a href="join.php">Create an Account</a>
+				<a href="/join/">Create an Account</a>
 			</li>
 			<li>
 				<?php

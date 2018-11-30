@@ -1,7 +1,3 @@
-<?php
-include 'header.php';
-?>
-
 <section>
 THIS IS NON-FUNCTIONAL
 	<form method=\"POST\" action=\"form.aspx\">
@@ -19,7 +15,3 @@ THIS IS NON-FUNCTIONAL
 		<button type="submit" value="submit">Submit</button><button type="reset" value="reset">Clear</button>
 	</form>
 </section>
-
-<?php
-include 'footer.php';
-?>
