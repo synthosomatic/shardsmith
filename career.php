@@ -1,23 +1,31 @@
 <section id="careers">
-	<ul>
-		<li><button type="button" class="career" value="gathering">Gathering</button></li>
-		<li><button type="button" class="career" value="crafting">Crafting</button></li>
+	<ul id="jobs">
+		<li><button type="button" class="job" value="woodworking">Carpenter</button></li>
+		<li><button type="button" class="job" value="smithing">Blacksmith</button></li>
+		<li><button type="button" class="job" value="armorcraft">Armorer</button></li>
+		<li><button type="button" class="job" value="goldsmithing">Goldsmith</button></li>
+		<li><button type="button" class="job" value="leatherworking">Leatherworker</button></li>
+		<li><button type="button" class="job" value="clothcraft">Weaver</button></li>
+		<li><button type="button" class="job" value="alchemy">Alchemist</button></li>
+		<li><button type="button" class="job" value="cooking">Culinarian</button></li>
 	</ul>
-	<ul id="jobs"></ul>
 </section>
 <section id="careerdata">
 
 <?php
 
-	$key = "c01f6d205597419db64dd68c";
+	$endpoint = "https://xivapi.com/";
+	$key = "key=c01f6d205597419db64dd68c";
 
-	$jsonData = file_get_contents("https://xivapi.com/Item?columns=LevelItem,ItemUICategory.Name,Name&key=".$key);
+	$jsonData = file_get_contents($endpoint."search?indexes=Item&filters=ItemUICategory.Name_en=Crystal&".$key);
 
 	$items = json_decode($jsonData, true);
 
 	foreach($items["Results"] as $item){
 
-		echo $item["Name"];
+		$itemData = file_get_contents($endpoint."Item/2?".$key);
+
+		echo "<table><tr><td>".$item["Name"]."</td></tr></table>";
 
 	}
 

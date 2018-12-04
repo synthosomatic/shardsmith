@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- If you can read this, say hi to Zen Akrua on Famfrit! -->
+	<!-- If you can read this, say hi to Cerise Black on Hyperion! -->
 	<title>Shardsmith</title>
 	<meta name="robots" content="noimageindex" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -40,7 +40,7 @@
 		   url('/fonts/Eorzea.ttf')  format('truetype') /* Safari, Android, iOS */
 	}
 	@import url("//fonts.googleapis.com/css?family=Open+Sans");
-	</style
+	</style>
 </head>
 <body>
 <header>
@@ -68,24 +68,24 @@
 			<li>
 				<a href="/career/">Career</a>
 			</li>
-			<li>
+<!--			<li>
 				<a href="/join/">Create an Account</a>
 			</li>
 			<li>
 				<?php
-					if (isset($_POST["username"])) {
-						echo "Welcome, ", $_POST["username"], "! <a href=\"logout.php\">Logout</a>?";
-					} else {
-						echo "<form method=\"POST\" action=\"form.aspx\">
-							<input type=\"text\" id=\"username\" name=\"username\" minlength=\"3\" maxlength=\"12\" placeholder=\"Username\" required>
-							<input type=\"text\" id=\"password\" name=\"password\" minlength=\"12\" maxlength=\"24\" placeholder=\"Password\" required>
-							<button type=\"submit\" value=\"submit\" >Login</button>
-						</form>";
-					};
+//					if (isset($_POST["username"])) {
+//						echo "Welcome, ", $_POST["username"], "! <a href=\"logout.php\">Logout</a>?";
+//					} else {
+//						echo "<form method=\"POST\" action=\"form.aspx\">
+//							<input type=\"text\" id=\"username\" name=\"username\" minlength=\"3\" maxlength=\"12\" placeholder=\"Username\" required>
+//							<input type=\"text\" id=\"password\" name=\"password\" minlength=\"12\" maxlength=\"24\" placeholder=\"Password\" required>
+//							<button type=\"submit\" value=\"submit\" >Login</button>
+//						</form>";
+//					};
 				?>
-			</li>
+			</li>-->
 		</ul>
-		<img src="https://s3.amazonaws.com/www.shardsmith.com/images/icons/icon_job_Dragoon.png" />
+		<img src="https://www.shardsmith.com/images/icons/icon_job_Dragoon.png" />
 	</nav>
 </header>
 <main>
