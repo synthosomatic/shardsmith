@@ -29,8 +29,6 @@
 
 			foreach($items["Results"] as $item){
 
-				$itemData = file_get_contents($endpoint."Item/2?".$key);
-
 				echo "<table><tr><td>".$item["Name"]."</td></tr></table>";
 
 			}
