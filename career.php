@@ -8,7 +8,7 @@
 		
 			if (this.readyState == 4 && this.status == 200) {
 		
-				document.getElementByTagName("list").innerHTML = this.responseText;
+				document.getElementsByTagName("list").innerHTML = this.responseText;
 		
 			}
 		};
