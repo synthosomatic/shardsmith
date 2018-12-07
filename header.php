@@ -85,7 +85,7 @@
 				?>
 			</li>-->
 		</ul>
-		<img src="https://www.shardsmith.com/images/icons/icon_job_Dragoon.png" />
+		<img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Dragoon.png" />
 	</nav>
 </header>
 <main>
