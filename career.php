@@ -1,6 +1,6 @@
 <log>
 
-	<section id="lognav">
+	<nav>
 		<ul id="classes">Class
 			<li><button type="button" class="class" value="woodworking">Carpenter</button></li>
 			<li><button type="button" class="class" value="smithing">Blacksmith</button></li>
@@ -14,9 +14,9 @@
 		<ul>Extras
 			<li>Favorites</li>
 		</ul>
-	</section>
+	</nav>
 
-	<section id="loglist">
+	<list>
 
 		<?php
 
@@ -37,12 +37,12 @@
 
 		?>
 
-	</section>
+	</list>
 
-	<section id="logrecipe">
+	<recipe>
 
 		test
 
-	</section>
+	</recipe>
 	
 </log>
