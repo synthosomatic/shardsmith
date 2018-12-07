@@ -43,6 +43,7 @@ main form {
 
 main {
   display: flex;
+  flex-direction: row;
 }
 
 .hide {
