@@ -12,7 +12,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<base href="/" />
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/normalize.css" media="all"/>
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen"/>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<!--<script type="text/javascript" src="functions.js"></script>-->
