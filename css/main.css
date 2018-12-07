@@ -41,11 +41,6 @@ footer {
 main form {
   color: #fff; }
 
-main {
-  display: flex;
-  flex-direction: row;
-}
-
 .hide {
   display: none; }
 
