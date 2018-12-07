@@ -30,6 +30,12 @@ main {
   flex-direction: row;
   }
 
+log {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: row;
+}
+
 #careers {
   display: flex;
   flex-direction: column; }
