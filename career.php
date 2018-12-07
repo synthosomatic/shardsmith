@@ -1,34 +1,48 @@
-<section id="careers">
-	<ul id="jobs">
-		<li><button type="button" class="job" value="woodworking">Carpenter</button></li>
-		<li><button type="button" class="job" value="smithing">Blacksmith</button></li>
-		<li><button type="button" class="job" value="armorcraft">Armorer</button></li>
-		<li><button type="button" class="job" value="goldsmithing">Goldsmith</button></li>
-		<li><button type="button" class="job" value="leatherworking">Leatherworker</button></li>
-		<li><button type="button" class="job" value="clothcraft">Weaver</button></li>
-		<li><button type="button" class="job" value="alchemy">Alchemist</button></li>
-		<li><button type="button" class="job" value="cooking">Culinarian</button></li>
-	</ul>
-</section>
-<section id="careerdata">
+<log>
 
-<?php
+	<section id="lognav">
+		<ul id="classes">Class
+			<li><button type="button" class="class" value="woodworking">Carpenter</button></li>
+			<li><button type="button" class="class" value="smithing">Blacksmith</button></li>
+			<li><button type="button" class="class" value="armorcraft">Armorer</button></li>
+			<li><button type="button" class="class" value="goldsmithing">Goldsmith</button></li>
+			<li><button type="button" class="class" value="leatherworking">Leatherworker</button></li>
+			<li><button type="button" class="class" value="clothcraft">Weaver</button></li>
+			<li><button type="button" class="class" value="alchemy">Alchemist</button></li>
+			<li><button type="button" class="class" value="cooking">Culinarian</button></li>
+		</ul>
+		<ul>Extras
+			<li>Favorites</li>
+		</ul>
+	</section>
 
-	$endpoint = "https://xivapi.com/";
-	$key = "key=c01f6d205597419db64dd68c";
+	<section id="loglist">
 
-	$jsonData = file_get_contents($endpoint."search?indexes=Item&filters=ItemUICategory.Name_en=Crystal&".$key);
+		<?php
 
-	$items = json_decode($jsonData, true);
+			$endpoint = "https://xivapi.com/";
+			$key = "key=c01f6d205597419db64dd68c";
 
-	foreach($items["Results"] as $item){
+			$jsonData = file_get_contents($endpoint."search?indexes=Item&filters=ItemUICategory.Name_en=Crystal&".$key);
 
-		$itemData = file_get_contents($endpoint."Item/2?".$key);
+			$items = json_decode($jsonData, true);
 
-		echo "<table><tr><td>".$item["Name"]."</td></tr></table>";
+			foreach($items["Results"] as $item){
 
-	}
+				$itemData = file_get_contents($endpoint."Item/2?".$key);
 
-?>
+				echo "<table><tr><td>".$item["Name"]."</td></tr></table>";
 
-</section>
+			}
+
+		?>
+
+	</section>
+
+	<section id="logrecipe">
+
+		test
+
+	</section>
+	
+</log>
