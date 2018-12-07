@@ -41,9 +41,9 @@ footer {
 main form {
   color: #fff; }
 
-#careerdata {
-  color: #fff;
-  text-shadow: 1px 1px 1px #000; }
+main {
+  display: flex;
+}
 
 .hide {
   display: none; }
