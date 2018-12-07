@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #100C14 url("https://s3.amazonaws.com/www.shardsmith.com/images/dragonskin.png") repeat fixed;
+  background: #100C14 url("https://storage.googleapis.com/shardsmith-210018.appspot.com/images/dragonskin.png") repeat fixed;
   font-family: "Meiryo",sans-serif;
   color: #aebbc1;
   text-shadow: 0 0.0625em 0.0625em #000;
