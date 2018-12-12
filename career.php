@@ -8,12 +8,12 @@
 		
 			if (this.readyState == 4 && this.status == 200) {
 		
-				document.getElementsByTagName("list").innerHTML = this.responseText;
+				document.getElementsByTagName("list").innerHTML = this.statusText;
 		
 			}
 		};
 		
-		xhttp.open("GET", "https://xivapi.com/search?indexes=Recipe&filters=ClassJob.ID=9,RecipeLevelTable.ClassJobLevel>=1,RecipeLevelTable.ClassJobLevel<=5", true);
+		xhttp.open("GET", "https://xivapi.com/search?indexes=Recipe&filters=ClassJob.ID=9,RecipeLevelTable.ClassJobLevel>=1,RecipeLevelTable.ClassJobLevel<=5&key=c01f6d205597419db64dd68c", true);
 		xhttp.send();
 		
 	}
