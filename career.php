@@ -30,14 +30,14 @@
 		
 		<ul id="classes">Class
 			
-			<li><button type="button" class="class" value="woodworking" onclick="getRecipes()">Carpenter</button></li>
-			<li><button type="button" class="class" value="smithing" onclick="getRecipes()">Blacksmith</button></li>
-			<li><button type="button" class="class" value="armorcraft" onclick="getRecipes()">Armorer</button></li>
-			<li><button type="button" class="class" value="goldsmithing" onclick="getRecipes()">Goldsmith</button></li>
-			<li><button type="button" class="class" value="leatherworking" onclick="getRecipes()">Leatherworker</button></li>
-			<li><button type="button" class="class" value="clothcraft" onclick="getRecipes()">Weaver</button></li>
-			<li><button type="button" class="class" value="alchemy" onclick="getRecipes()">Alchemist</button></li>
-			<li><button type="button" class="class" value="cooking" onclick="getRecipes()">Culinarian</button></li>
+			<li><button type="button" class="class" value="8" onclick="getRecipes()">Carpenter</button></li>
+			<li><button type="button" class="class" value="9" onclick="getRecipes()">Blacksmith</button></li>
+			<li><button type="button" class="class" value="10" onclick="getRecipes()">Armorer</button></li>
+			<li><button type="button" class="class" value="11" onclick="getRecipes()">Goldsmith</button></li>
+			<li><button type="button" class="class" value="12" onclick="getRecipes()">Leatherworker</button></li>
+			<li><button type="button" class="class" value="13" onclick="getRecipes()">Weaver</button></li>
+			<li><button type="button" class="class" value="14" onclick="getRecipes()">Alchemist</button></li>
+			<li><button type="button" class="class" value="15" onclick="getRecipes()">Culinarian</button></li>
 		
 		</ul>
 		
