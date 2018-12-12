@@ -3,45 +3,46 @@
 	function getJob(val) {
 		
 		var job = val;
-        
-        var levelRange = document.createElement("li");
-        var levelRangeButton = document.createElement("button");
-        var levelRangeLabel = document.createTextNode("1-5");
+		
+		// Levels for range grouping https://xivapi.com/RecipeLevelTable?columns=ID
+		var levelRange = document.createElement("li");
+		var levelRangeButton = document.createElement("button");
+		var levelRangeLabel = document.createTextNode("1-5");
 
-        // Get the <ul> element with id="recipeLevel"
-        var list = document.getElementById("recipeLevel");
+		// Get the <ul> element with id="recipeLevel"
+		var list = document.getElementById("recipeLevel");
 
-        // As long as <ul> has a child node, remove it
-        while (list.hasChildNodes()) {   
-            list.removeChild(list.firstChild);
-        }
-
-        levelRange.appendChild(levelRangeButton);
-        levelRangeButton.appendChild(levelRangeLabel);
-        document.getElementById("recipeLevel").appendChild(levelRange);
-			
-		function getRecipes(val) {
-
-			var xhttp = new XMLHttpRequest();
-
-			xhttp.onreadystatechange = function() {
-
-				if (this.readyState == 4 && this.status == 200) {
-
-					document.getElementById("list").innerHTML = this.responseText;
-
-				} else {
-
-					document.getElementById("list").innerHTML = this.statusText;
-
-				}
-
-			};
-
-			xhttp.open("GET", "https://xivapi.com/search?key=c01f6d205597419db64dd68c&indexes=Recipe&filters=ClassJob.ID="+job+",RecipeLevelTableTargetID>=1&RecipeLevelTableTargetID<=5", true);
-			xhttp.send();
-
+		// As long as <ul> has a child node, remove it
+		while (list.hasChildNodes()) {   
+		    list.removeChild(list.firstChild);
 		}
+
+		levelRange.appendChild(levelRangeButton);
+		levelRangeButton.appendChild(levelRangeLabel);
+		document.getElementById("recipeLevel").appendChild(levelRange);
+
+			function getRecipes(val) {
+
+				var xhttp = new XMLHttpRequest();
+
+				xhttp.onreadystatechange = function() {
+
+					if (this.readyState == 4 && this.status == 200) {
+
+						document.getElementById("list").innerHTML = this.responseText;
+
+					} else {
+
+						document.getElementById("list").innerHTML = this.statusText;
+
+					}
+
+				};
+
+				xhttp.open("GET", "https://xivapi.com/search?key=c01f6d205597419db64dd68c&indexes=Recipe&filters=ClassJob.ID="+job+",RecipeLevelTableTargetID>=1&RecipeLevelTableTargetID<=5", true);
+				xhttp.send();
+
+			}
 		
 	}
 		
