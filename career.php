@@ -38,7 +38,7 @@
 
 			};
 
-			xhttp.open("GET", "https://xivapi.com/search?key=c01f6d205597419db64dd68c&indexes=Recipe&filters=ClassJob.ID="+job+",RecipeLevelTable.ClassJobLevel>=1,RecipeLevelTable.ClassJobLevel<=5", true);
+			xhttp.open("GET", "https://xivapi.com/search?key=c01f6d205597419db64dd68c&indexes=Recipe&filters=ClassJob.ID="+job+",RecipeLevelTableTargetID>=1&RecipeLevelTableTargetID<=5", true);
 			xhttp.send();
 
 		}
