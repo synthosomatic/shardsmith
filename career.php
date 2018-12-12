@@ -3,21 +3,22 @@
 	function getJob(val) {
 		
 		var job = val;
-		
-		var levelRange = document.createElement("li");
-		var levelRangeButton = document.createElement("button");
-		var levelRangeLabel = document.createTextNode("1-5");
+        
+        var levelRange = document.createElement("li");
+        var levelRangeButton = document.createElement("button");
+        var levelRangeLabel = document.createTextNode("1-5");
 
-		// Get the <ul> element with id="recipeLevel"
-		var list = document.getElementById("recipeLevel");
+        // Get the <ul> element with id="recipeLevel"
+        var list = document.getElementById("recipeLevel");
 
-		// As long as <ul> has a child node, remove it
-		while (list.hasChildNodes()) {   
-		list.removeChild(list.firstChild);
-		}
-		levelRange.appendChild(levelRangeButton);
-		levelRangeButton.appendChild(levelRangeLabel);
-		document.getElementById("recipeLevel").appendChild(levelRange);
+        // As long as <ul> has a child node, remove it
+        while (list.hasChildNodes()) {   
+            list.removeChild(list.firstChild);
+        }
+
+        levelRange.appendChild(levelRangeButton);
+        levelRangeButton.appendChild(levelRangeLabel);
+        document.getElementById("recipeLevel").appendChild(levelRange);
 			
 		function getRecipes(val) {
 
@@ -77,12 +78,10 @@
 		
 		<p>Recipe Level</p>
 		
-		<ul id="levelRange">
-		
-			<button>Recipes</button><button>Special</button>
+		<button>Recipes</button><button>Special</button>
 
-			<li><button type="button" class="job" value="8" onclick="getRecipes(this.value)">1-5</button></li>
-			
+		<ul id="recipeLevel">
+		
 		</ul>
 	
 	</div>
