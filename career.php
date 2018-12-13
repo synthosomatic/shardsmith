@@ -1,51 +1,51 @@
 <script>
 	
-	function getJob(val) {
-		
-		var job = val;
-		
-		// Levels for range grouping https://xivapi.com/RecipeLevelTable?columns=ID
-		var levelRange = document.createElement("li");
-		var levelRangeButton = document.createElement("button");
-		var levelRangeLabel = document.createTextNode("1-5");
-
-		// Get the <ul> element with id="recipeLevel"
-		var list = document.getElementById("recipeLevel");
-
-		// As long as <ul> has a child node, remove it
-		while (list.hasChildNodes()) {   
-		    list.removeChild(list.firstChild);
-		}
-
-		levelRange.appendChild(levelRangeButton);
-		levelRangeButton.appendChild(levelRangeLabel);
-		document.getElementById("recipeLevel").appendChild(levelRange);
-
-			function getRecipes(val) {
-
-				var xhttp = new XMLHttpRequest();
-
-				xhttp.onreadystatechange = function() {
-
-					if (this.readyState == 4 && this.status == 200) {
-
-						document.getElementById("list").innerHTML = this.responseText;
-
-					} else {
-
-						document.getElementById("list").innerHTML = this.statusText;
-
-					}
-
-				};
-
-				xhttp.open("GET", "https://xivapi.com/search?key=c01f6d205597419db64dd68c&indexes=Recipe&filters=ClassJob.ID="+job+",RecipeLevelTableTargetID>=1&RecipeLevelTableTargetID<=5", true);
-				xhttp.send();
-
-			}
-		
+	function fetchData(url, cFunction) {
+	  var xhttp;
+	  xhttp = new XMLHttpRequest();
+	  xhttp.responseType = "json";
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	      cFunction(this);
+	    }
+	  };
+	  xhttp.open("GET", url, true);
+	  xhttp.send();
 	}
-		
+
+	function getLevels(xhttp) {
+
+	  // Get the <ul> element with id="recipeLevel"
+	  var recipeLevels = document.getElementById("recipeLevel");
+	  // As long as <ul> has a child node, remove it
+	  while (recipeLevels.hasChildNodes()) {
+	    recipeLevels.removeChild(recipeLevels.firstChild);
+	  }
+
+		// convert level ID objects to number array
+	  var rawData = xhttp.response;
+	  var data = [];
+
+	  for (i in rawData.Results) {
+
+	    var level = Number(rawData.Results[i]['ID']);
+	    data.push(level);
+
+	  }
+
+		//
+		var levelRanges = "";
+	  var i;
+	  for (i = 0; i < data.length; i++) {
+
+	    var upper = i + 5;
+
+	    document.getElementById("recipeLevel").innerHTML = levelRanges += data[i] + "-" + upper + "<br />";
+
+	  }
+
+	}
+
 </script>
 
 <div id="nav">
