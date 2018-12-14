@@ -16,6 +16,7 @@ function fetchData(url, cFunction) {
 
 // Get level IDs from RecipeLevelTable
 function getLevels(xhttp) {
+	var job = this.value;
   // Get the <ul> element with id="recipeLevel"
   var recipeLevels = document.getElementById("recipeLevel");
   // As long as <ul> has a child node, remove it
@@ -49,7 +50,7 @@ function getLevels(xhttp) {
 		var lower = levels [i];
 		var upper = levels[i] + 4;
 
-		document.getElementById("recipeLevel").innerHTML = levelRanges += lower + "-" + upper + "<br />";
+		document.getElementById("recipeLevel").innerHTML = levelRanges += "<li><button type=\"button\" class=\"levelRange\" onclick=\"fetchData('https://xivapi.com/search?indexes=Recipe&filters=ClassJob.ID=" + job + ",RecipeLevelTable.ClassJobLevel%3E=" + lower + ",RecipeLevelTable.ClassJobLevel%3C=" + upper + "')\">" + lower + "-" + upper + "</button></li>" + "<br />";
 			
 	}
 	
