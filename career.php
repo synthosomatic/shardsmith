@@ -1,51 +1,59 @@
 <script>
 	
+	// Get data from API
 	function fetchData(url, cFunction) {
-  var xhttp;
-  xhttp = new XMLHttpRequest();
-  xhttp.responseType = "json";
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      cFunction(this);
-    }
-  };
-  xhttp.open("GET", url, true);
-  xhttp.send();
-}
+	  var xhttp;
+	  xhttp = new XMLHttpRequest();
+	  xhttp.responseType = "json";
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	      cFunction(this);
+	    }
+	  };
+	  xhttp.open("GET", url, true);
+	  xhttp.send();
+	}
 
-function getLevels(xhttp) {
+	// Get level IDs from RecipeLevelTable
+	function getLevels(xhttp) {
+	  // Get the <ul> element with id="recipeLevel"
+	  var recipeLevels = document.getElementById("recipeLevel");
+	  // As long as <ul> has a child node, remove it
+	  while (recipeLevels.hasChildNodes()) {
+	    recipeLevels.removeChild(recipeLevels.firstChild);
+	  }
 
-  // Get the <ul> element with id="recipeLevel"
-  var recipeLevels = document.getElementById("recipeLevel");
-  // As long as <ul> has a child node, remove it
-  while (recipeLevels.hasChildNodes()) {
-    recipeLevels.removeChild(recipeLevels.firstChild);
-  }
-	
-	// convert level ID objects to number array
-  var rawData = xhttp.response;
-  var data = [];
+	  var rawData = xhttp.response;
+	  var data = [];
+	  var levels = [];
 
-  for (i in rawData.Results) {
 
-    var level = Number(rawData.Results[i]['ID']);
-    data.push(level);
-    
-  }
-	
-	//
-	var levelRanges = "";
-  var i;
-  for (i = 0; i < data.length; i++) {
+	  // Extract the level IDs into their own array
+	  for (i in rawData.Results) {
 
-    var upper = i + 5;
+	    var level = rawData.Results[i]['ID'];
+	    data.push(level);
 
-    document.getElementById("recipeLevel").innerHTML = levelRanges += data[i] + "-" + upper + "<br />";
+	  }
 
-  }
+	  levels = data.filter(function(value, index, Arr) {
 
-}
+	    return index % 5 == 0;
 
+	  });
+
+	  var levelRanges = "";
+
+	  for (i = 0; i < levels.length; i++) {
+
+	    var lower = levels[i];
+	    var upper = levels[i] + 4;
+
+	    document.getElementById("recipeLevel").innerHTML = levelRanges += lower + "-" + upper + "<br />";
+
+	  }
+
+	}
 
 </script>
 
