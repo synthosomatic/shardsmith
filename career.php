@@ -16,8 +16,7 @@ function fetchData(url, cFunction) {
 
 // Get level IDs from RecipeLevelTable
 function getLevels(xhttp) {
-	var job = this.value;
-  // Get the <ul> element with id="recipeLevel"
+	// Get the <ul> element with id="recipeLevel"
   var recipeLevels = document.getElementById("recipeLevel");
   // As long as <ul> has a child node, remove it
   while (recipeLevels.hasChildNodes()) {
@@ -50,7 +49,31 @@ function getLevels(xhttp) {
 		var lower = levels[i];
 		var upper = levels[i] + 4;
 
-		document.getElementById("recipeLevel").innerHTML = levelRanges += "<li><button type=\"button\" class=\"levelRange\" onclick=\"fetchData('https://xivapi.com/search?indexes=Recipe&filters=ClassJob.ID=" + job + ",RecipeLevelTable.ClassJobLevel%3E=" + lower + ",RecipeLevelTable.ClassJobLevel%3C=" + upper + "')\">" + lower + "-" + upper + "</button></li>" + "<br />";
+		document.getElementById("recipeLevel").innerHTML = levelRanges += "<li><button type=\"button\" class=\"levelRange\" onclick=\"fetchData('https://xivapi.com/search?indexes=Recipe&filters=ClassJob.ID=" + job + ",RecipeLevelTable.ClassJobLevel%3E=" + lower + ",RecipeLevelTable.ClassJobLevel%3C=" + upper + "', getRecipes)\">" + lower + "-" + upper + "</button></li>" + "<br />";
+			
+	}
+	
+}
+
+// Get recipes for specified job
+function getRecipes(xhttp) {
+	// Get the <ul> element with id="recipeLevel"
+  var recipeList = document.getElementById("recipeList");
+  // As long as <ul> has a child node, remove it
+  while (recipeList.hasChildNodes()) {
+    recipeList.removeChild(recipeList.firstChild);
+  }
+
+  var rawData = xhttp.response;
+
+  var list = "";
+	
+	for (i = 0; i < rawData.Results.length; i++) {
+	
+		var id = rawData.Results[i]['ID'];
+		var name = rawData.Results[i]['Name'];
+		
+		document.getElementById("recipeList").innerHTML = list += "<li><button type=\"button\" class=\"recipe\" onclick=\"fetchData('https://xivapi.com/recipe/" + id + "', getRecipeMaterials)\">" + name + "</button></li>" + "<br />";
 			
 	}
 	
@@ -62,7 +85,7 @@ function getLevels(xhttp) {
 
   <ul id="jobs">Crafting Log
 
-    <li><button type="button" class="job" value="8" onclick="fetchData('https://xivapi.com/RecipeLevelTable?columns=ID', getLevels)">Carpenter</button></li>
+    <li><button type="button" class="job" value="8" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?columns=ID', getLevels)">Carpenter</button></li>
     <li><button type="button" class="job" value="9" onclick="getJob(this.value)">Blacksmith</button></li>
     <li><button type="button" class="job" value="10" onclick="getJob(this.value)">Armorer</button></li>
     <li><button type="button" class="job" value="11" onclick="getJob(this.value)">Goldsmith</button></li>
@@ -97,11 +120,11 @@ function getLevels(xhttp) {
 
   </div>
 
-  <div id="list">
+  <div id="recipeList">
 
   </div>
 
-  <div id="recipe">
+  <div id="recipeMats">
 
   </div>
 
