@@ -49,7 +49,7 @@ function getLevels(xhttp) {
 		var lower = levels[i];
 		var upper = levels[i] + 4;
 
-		document.getElementById("recipeLevel").innerHTML = levelRanges += "<li><button type=\"button\" class=\"levelRange\" onclick=\"fetchData('https://xivapi.com/search?indexes=Recipe&filters=ClassJob.ID=" + job + ",ItemResult.ItemSearchCategoryTargetID>0,RecipeLevelTable.ClassJobLevel%3E=" + lower + ",RecipeLevelTable.ClassJobLevel%3C=" + upper + "', getRecipes)\">" + lower + "-" + upper + "</button></li>" + "<br />";
+		document.getElementById("recipeLevel").innerHTML = levelRanges += "<li><button type=\"button\" class=\"levelRange\" onclick=\"fetchData('https://xivapi.com/search?indexes=Recipe&filters=ClassJob.ID=" + job + ",ItemResult.ItemSearchCategoryTargetID>0,RecipeLevelTable.ClassJobLevel>=" + lower + ",RecipeLevelTable.ClassJobLevel<=" + upper + "', getRecipes)\">" + lower + "-" + upper + "</button></li>" + "<br />";
 			
 	}
 	
@@ -86,13 +86,13 @@ function getRecipes(xhttp) {
   <ul id="jobs">Crafting Log
 
     <li><button type="button" class="job" value="8" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?columns=ID', getLevels)">Carpenter</button></li>
-    <li><button type="button" class="job" value="9" onclick="getJob(this.value)">Blacksmith</button></li>
-    <li><button type="button" class="job" value="10" onclick="getJob(this.value)">Armorer</button></li>
-    <li><button type="button" class="job" value="11" onclick="getJob(this.value)">Goldsmith</button></li>
-    <li><button type="button" class="job" value="12" onclick="getJob(this.value)">Leatherworker</button></li>
-    <li><button type="button" class="job" value="13" onclick="getJob(this.value)">Weaver</button></li>
-    <li><button type="button" class="job" value="14" onclick="getJob(this.value)">Alchemist</button></li>
-    <li><button type="button" class="job" value="15" onclick="getJob(this.value)">Culinarian</button></li>
+    <li><button type="button" class="job" value="9" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?columns=ID', getLevels)">Blacksmith</button></li>
+    <li><button type="button" class="job" value="10" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?columns=ID', getLevels)">Armorer</button></li>
+    <li><button type="button" class="job" value="11" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?columns=ID', getLevels)">Goldsmith</button></li>
+    <li><button type="button" class="job" value="12" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?columns=ID', getLevels)">Leatherworker</button></li>
+    <li><button type="button" class="job" value="13" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?columns=ID', getLevels)">Weaver</button></li>
+    <li><button type="button" class="job" value="14" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?columns=ID', getLevels)">Alchemist</button></li>
+    <li><button type="button" class="job" value="15" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?columns=ID', getLevels)">Culinarian</button></li>
 
   </ul>
 
