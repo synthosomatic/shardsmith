@@ -49,7 +49,7 @@ function getLevels(xhttp) {
 		var lower = levels[i];
 		var upper = levels[i] + 4;
 
-		document.getElementById("recipeLevel").innerHTML = levelRanges += "<li><button type=\"button\" class=\"levelRange\" onclick=\"fetchData('https://xivapi.com/search?indexes=Recipe&filters=ClassJob.ID=" + job + ",RecipeLevelTable.ClassJobLevel%3E=" + lower + ",RecipeLevelTable.ClassJobLevel%3C=" + upper + "', getRecipes)\">" + lower + "-" + upper + "</button></li>" + "<br />";
+		document.getElementById("recipeLevel").innerHTML = levelRanges += "<li><button type=\"button\" class=\"levelRange\" onclick=\"fetchData('https://xivapi.com/search?indexes=Recipe&filters=ClassJob.ID=" + job + ",ItemResult.ItemSearchCategoryTargetID>0,RecipeLevelTable.ClassJobLevel%3E=" + lower + ",RecipeLevelTable.ClassJobLevel%3C=" + upper + "', getRecipes)\">" + lower + "-" + upper + "</button></li>" + "<br />";
 			
 	}
 	
