@@ -47,7 +47,7 @@ function getLevels(xhttp) {
 	
 	for (i = 0; i < levels.length; i++) {
 	
-		var lower = levels [i];
+		var lower = levels[i];
 		var upper = levels[i] + 4;
 
 		document.getElementById("recipeLevel").innerHTML = levelRanges += "<li><button type=\"button\" class=\"levelRange\" onclick=\"fetchData('https://xivapi.com/search?indexes=Recipe&filters=ClassJob.ID=" + job + ",RecipeLevelTable.ClassJobLevel%3E=" + lower + ",RecipeLevelTable.ClassJobLevel%3C=" + upper + "')\">" + lower + "-" + upper + "</button></li>" + "<br />";
