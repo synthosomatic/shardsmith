@@ -1,7 +1,13 @@
-@font-face {	
-  font-family: "Eorzea";	
-  src: url("/fonts/Eorzea.ttf");
+@font-face {
+	font-family: 'Eorzea';
+	src: url('/fonts/Eorzea.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/Eorzea.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('/fonts/Eorzea.woff2') format('woff2'), /* Super Modern Browsers */
+		url('/fonts/Eorzea.woff') format('woff'), /* Pretty Modern Browsers */
+		url('/fonts/Eorzea.ttf')  format('truetype') /* Safari, Android, iOS */
 }
+
+@import url("//fonts.googleapis.com/css?family=Open+Sans");
 
 body {
   background: #100C14 url("https://storage.googleapis.com/shardsmith-210018.appspot.com/images/dragonskin.png") repeat fixed;

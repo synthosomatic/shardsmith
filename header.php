@@ -14,33 +14,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/normalize.css" media="all"/>
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen"/>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<!--<script type="text/javascript" src="functions.js"></script>-->
-	<script src="https://img.finalfantasyxiv.com/lds/pc/global/js/eorzeadb/loader.js?v1"></script>
-	<!-- JQuery-friendly script courtesy of https://www.reddit.com/r/ffxiv/comments/38l8fu/dynamic_fankit_tooltip_problems/ -->
-	<script>
-	eorzeadb.init_db_links = function ($) { 
-		$(document).on({
-			mouseenter: function () { 
-				eorzeadb.show_tooltip($(this))
-			}, 
-			mouseleave: function () { 
-				eorzeadb.hide_tooltip($(this)) 
-			}
-		}, '.eorzeadb_link')
-	}(jQuery)
-	</script>
-	<style>
-	@font-face {
-	  font-family: 'Eorzea';
-	  src: url('/fonts/Eorzea.eot'); /* IE9 Compat Modes */
-	  src: url('/fonts/Eorzea.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		   url('/fonts/Eorzea.woff2') format('woff2'), /* Super Modern Browsers */
-		   url('/fonts/Eorzea.woff') format('woff'), /* Pretty Modern Browsers */
-		   url('/fonts/Eorzea.ttf')  format('truetype') /* Safari, Android, iOS */
-	}
-	@import url("//fonts.googleapis.com/css?family=Open+Sans");
-	</style>
 </head>
 <body>
 <header>
