@@ -1,193 +1,132 @@
 @font-face {
-    font-family: 'Eorzea';
-    src: url('/fonts/Eorzea.eot');
-    /* IE9 Compat Modes */
-    src: url('/fonts/Eorzea.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('/fonts/Eorzea.woff2') format('woff2'), /* Super Modern Browsers */
-    url('/fonts/Eorzea.woff') format('woff'), /* Pretty Modern Browsers */
-    url('/fonts/Eorzea.ttf') format('truetype') /* Safari, Android, iOS */
+	font-family: 'Eorzea';
+	src: url('/fonts/Eorzea.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/Eorzea.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('/fonts/Eorzea.woff2') format('woff2'), /* Super Modern Browsers */
+		url('/fonts/Eorzea.woff') format('woff'), /* Pretty Modern Browsers */
+		url('/fonts/Eorzea.ttf')  format('truetype') /* Safari, Android, iOS */
 }
 
 @import url("//fonts.googleapis.com/css?family=Open+Sans");
 
 body {
-    background: #100C14 url("https://storage.googleapis.com/shardsmith-210018.appspot.com/images/dragonskin.png") repeat fixed;
-    font-family: "Meiryo", sans-serif;
-    color: #aebbc1;
-    text-shadow: 0 0.0625em 0.0625em #000;
+  background: #100C14 url("https://storage.googleapis.com/shardsmith-210018.appspot.com/images/dragonskin.png") repeat fixed;
+  font-family: "Meiryo",sans-serif;
+  color: #aebbc1;
+  text-shadow: 0 0.0625em 0.0625em #000;
 }
 
 a {
-    text-decoration: none;
-    color: #BAAA78;
+  text-decoration: none;
+  color: #BAAA78;
 }
 
-input,
+input, button {
+  color: #BAAA78;
+  background: linear-gradient(transparent, #1d1b22), linear-gradient(to right, #1D1B22, #413F52, #1D1B22);
+  border: 0.0625em solid transparent;
+  border-image: linear-gradient(to right, #31303E, #BAAA78, #31303E);
+  border-image-slice: 1;
+  box-shadow: 0 0.125em 0.3125em #000;
+  outline: none;
+  text-shadow: 0 0.0625em 0.0625em #000;
+}
+
 button {
-    color: #BAAA78;
-    background: linear-gradient(transparent, #1d1b22), linear-gradient(to right, #1D1B22, #413F52, #1D1B22);
-    border: 0.0625em solid transparent;
-    border-image: linear-gradient(to right, #31303E, #BAAA78, #31303E);
-    border-image-slice: 1;
-    box-shadow: 0 0.125em 0.3125em #000;
-    outline: none;
-    text-shadow: 0 0.0625em 0.0625em #000;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-button {
-    text-transform: uppercase;
-    cursor: pointer;
+button:focus {
+  background: linear-gradient(transparent, #2f2c38), linear-gradient(to right, #322e3a, #57546d, #322e3a);
 }
-
-    button:focus {
-        background: linear-gradient(transparent, #2f2c38), linear-gradient(to right, #322e3a, #57546d, #322e3a);
-    }
 
 input {
-    background: #000;
+  background: #000;
 }
 
-header,
-footer {
-    background: linear-gradient(transparent, #1d1b22), linear-gradient(to right, #1D1B22, #413F52, #1D1B22);
-    border: 0.1875em solid transparent;
-    border-image: linear-gradient(to right, #31303E, #BAAA78, #31303E);
-    border-image-slice: 1;
-    border-left: 0 solid #000;
-    border-right: 0 solid #000;
-    color: #BAAA78;
-    text-shadow: 0 0.0625em 0.0625em #000;
+header, footer {
+  background: linear-gradient(transparent, #1d1b22), linear-gradient(to right, #1D1B22, #413F52, #1D1B22);
+  border: 0.1875em solid transparent;
+  border-image: linear-gradient(to right, #31303E, #BAAA78, #31303E);
+  border-image-slice: 1;
+  border-left: 0 solid #000;
+  border-right: 0 solid #000;
+  color: #BAAA78;
+  text-shadow: 0 0.0625em 0.0625em #000;
 }
 
 svg {
-    text-shadow: none;
+  text-shadow: none;
 }
 
 #logo {
-    text-shadow: 0 0 0.3125em black, 0 0 0.625em black, 0 0 0.9375em black, 0 0 1.25em black;
+  text-shadow: 0 0 0.3125em black,0 0 0.625em black,0 0 0.9375em black,0 0 1.25em black;
 }
 
 header {
-    box-shadow: 0 0.3125em 1.25em #000;
-    padding: 0 0.3125em;
+  box-shadow: 0 0.3125em 1.25em #000;
+  padding: 0 0.3125em;
 }
 
-    header nav li a {
-        font-size: .8em;
-        color: #9C9ACF;
-        text-shadow: 0 0 2px #000, 0 0 25px #0000FF, 0 0 5px #2A2952;
-    }
+header nav li a {
+  font-size: .8em;
+  color: #9C9ACF;	
+  text-shadow: 0 0 2px #000,0 0 25px #0000FF,0 0 5px #2A2952;
+}
 
-        header nav li a:hover {
-            color: #aebbc1;
-        }
+header nav li a:hover {
+  color: #aebbc1;
+}
 
-    header nav span {
-        height: 100%;
-    }
+header nav span {
+  height: 100%;
+}
 
 footer {
-    background: linear-gradient(transparent, #1d1b22), linear-gradient(to right, #1D1B22, #413F52, #1D1B22);
-    box-shadow: 0 -0.125em 0.9375em #000;
+  background: linear-gradient(transparent, #1d1b22), linear-gradient(to right, #1D1B22, #413F52, #1D1B22);
+  box-shadow: 0 -0.125em 0.9375em #000;
 }
 
 #jobs {
-    border-top: 0.0625em solid transparent;
-    border-image: linear-gradient(to right, #31303E, #BAAA78, #31303E);
-    border-image-slice: 1;
-    padding-top: 0.3125em;
+  border-top: 0.0625em solid transparent;
+  border-image: linear-gradient(to right, #31303E, #BAAA78, #31303E);
+  border-image-slice: 1;
+  padding-top: 0.3125em;
 }
 
-    #jobs li {
-        list-style: none;
-    }
+#jobs li {
+  list-style: none;
+}
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .White {
-    color: #f3f3f3 !important;
+  color: #f3f3f3 !important;
 }
 
 .Green {
-    color: #c0ffc0 !important;
+  color: #c0ffc0 !important;
 }
 
 .Blue {
-    color: #5990ff !important;
+  color: #5990ff !important;
 }
 
 .Pink {
-    color: #d789b6 !important;
+  color: #d789b6 !important;
 }
 
 .Yellow {
-    color: #e5dd7e !important;
+  color: #e5dd7e !important;
 }
 
 .Orange {
-    color: #ffa666 !important;
+  color: #ffa666 !important;
 }
 
 .Purple {
-    color: #b38cff !important;
-}
-
-input[type="text"] {
-    width: 12em;
-}
-
-body {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    text-align: center;
-}
-
-header,
-footer {
-    flex-shrink: 0;
-    /*	visibility: hidden; */
-}
-
-    header nav {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-        header nav li {
-            display: inline-block;
-        }
-
-            header nav li:after {
-                content: "\00B7";
-            }
-
-            header nav li:last-of-type:after {
-                content: none;
-            }
-
-#craftingLog {
-    background: #313031;
-}
-
-#jobList {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
-}
-
-#jobs {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: row;
-}
-
-#log {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: row;
+  color: #b38cff !important;
 }
