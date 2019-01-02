@@ -1,6 +1,4 @@
 // Get data from API
-
-
 function fetchData(url, cFunction) {
     var xhttp;
     xhttp = new XMLHttpRequest();
