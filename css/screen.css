@@ -1,59 +1,64 @@
 @import url("style.css");
 
 input[type="text"] {
-    width: 12em;
+  width: 12em;
 }
 
 body {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  align-items: stretch;
 }
 
 header,
+main,
 footer {
-    flex-shrink: 0;
-    /*	visibility: hidden; */
+  flex-shrink: 0;
 }
 
-    header nav {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+header nav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
-        header nav li {
-            display: inline-block;
-        }
+header nav li {
+  display: inline-block;
+}
 
-            header nav li:after {
-                content: "\00B7";
-            }
+header nav li:after {
+  content: "\00B7";
+}
 
-            header nav li:last-of-type:after {
-                content: none;
-            }
+header nav li:last-of-type:after {
+  content: none;
+}
+
+main {
+  flex-grow: 1;
+}
 
 #craftingLog {
-    background: #313031;
+  background: #313031;
 }
 
 #jobList {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
 }
 
 #jobs {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: row;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: row;
 }
 
 #log {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: row;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: row;
 }
