@@ -39,6 +39,8 @@ header nav li:last-of-type:after {
 
 main {
   flex-grow: 1;
+	height: inherit;
+	overflow: auto;
 }
 
 #craftingLog {
