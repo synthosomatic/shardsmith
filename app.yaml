@@ -8,6 +8,10 @@ handlers:
   secure: always
   static_dir: css
   
+- url: /scripts
+  secure: always
+  static_dir: scripts
+  
 - url: /fonts
   static_dir: fonts
   
