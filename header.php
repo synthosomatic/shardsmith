@@ -14,7 +14,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/normalize.css" media="all"/>
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen"/>
-	<script type="text/javascript" src="functions.js"></script>
+	<script type="text/javascript" src="scripts/functions.js"></script>
 </head>
 <body>
 <header>
