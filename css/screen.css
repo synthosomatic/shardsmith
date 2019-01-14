@@ -4,6 +4,10 @@ input[type="text"] {
   width: 12em;
 }
 
+html {
+	height: 100%;
+}
+
 body {
   display: flex;
   height: 100vh;
@@ -12,10 +16,9 @@ body {
   align-items: stretch;
 }
 
-header,
-main,
-footer {
-  flex-shrink: 0;
+main {
+	height: inherit;
+	overflow: auto;
 }
 
 header nav {
@@ -35,12 +38,6 @@ header nav li:after {
 
 header nav li:last-of-type:after {
   content: none;
-}
-
-main {
-  flex-grow: 1;
-	height: inherit;
-	overflow: auto;
 }
 
 #craftingLog {
