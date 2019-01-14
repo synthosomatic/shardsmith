@@ -4,10 +4,6 @@ input[type="text"] {
   width: 12em;
 }
 
-html {
-	height: 100%;
-}
-
 body {
   display: flex;
   height: 100vh;
