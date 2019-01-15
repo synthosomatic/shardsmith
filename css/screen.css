@@ -1,59 +1,80 @@
 @import url("style.css");
 
-input[type="text"] {
-  width: 12em;
+ul, menu, dir {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
 }
 
 body {
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-  text-align: center;
-  align-items: stretch;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
 }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    header ul {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    header li {
+        display: inline-block;
+    }
+
+    header li:after {
+        content: "\00B7";
+    }
+
+    header li:last-of-type:after {
+        content: none;
+    }
 
 main {
-	height: inherit;
-	overflow: auto;
-}
-
-header nav {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-header nav li {
-  display: inline-block;
-}
-
-header nav li:after {
-  content: "\00B7";
-}
-
-header nav li:last-of-type:after {
-  content: none;
+    height: 100vh;
+    overflow: auto;
 }
 
 #craftingLog {
-  background: #313031;
+    height: 50em;
+    width: 70.1875em;
+    margin: 2em auto;
 }
 
 #jobList {
-  display: flex;
-  flex: 1 0 auto;
-  flex-direction: column;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
 }
 
+    #jobList p {
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
 #jobs {
-  display: flex;
-  flex: 1 0 auto;
-  flex-direction: row;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+    padding-top: 0.3125em;
 }
 
 #log {
-  display: flex;
-  flex: 1 0 auto;
-  flex-direction: row;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+}
+
+li.levelRange {
+    font-size: 0.8125em;
 }
