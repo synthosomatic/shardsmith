@@ -1,55 +1,59 @@
-<div id="craftingLog">
+<log>
+	
+	<logHeader>
+		
+		<p><span>Crafting Log</span><span>Level 51 Miner</span></p>
 
-    <div id="jobList">
+	</logHeader>
+	
+	<logNav>
+	
+		<ul id="jobs">
 
-        <p><span>Crafting Log</span><span>Level 51 Miner</span></p>
-
-        <ul id="jobs">
-
-            <li><button type="button" class="job" value="8" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Carpenter.png"/></button></li>
-            <li><button type="button" class="job" value="9" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Blacksmith.png"/></button></li>
-            <li><button type="button" class="job" value="10" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Armorer.png"/></button></li>
-            <li><button type="button" class="job" value="11" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Goldsmith.png"/></button></li>
-            <li><button type="button" class="job" value="12" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Leatherworker.png"/></button></li>
-            <li><button type="button" class="job" value="13" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Weaver.png"/></button></li>
-            <li><button type="button" class="job" value="14" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Alchemist.png"/></button></li>
-            <li><button type="button" class="job" value="15" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Culinarian.png"/></button></li>
+			<li><button type="button" class="job" value="8" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Carpenter.png"/></button></li>
+			<li><button type="button" class="job" value="9" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Blacksmith.png"/></button></li>
+			<li><button type="button" class="job" value="10" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Armorer.png"/></button></li>
+			<li><button type="button" class="job" value="11" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Goldsmith.png"/></button></li>
+			<li><button type="button" class="job" value="12" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Leatherworker.png"/></button></li>
+			<li><button type="button" class="job" value="13" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Weaver.png"/></button></li>
+			<li><button type="button" class="job" value="14" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Alchemist.png"/></button></li>
+			<li><button type="button" class="job" value="15" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Culinarian.png"/></button></li>
 			<li><button type="button" class="job" value="15">Search</button></li>
 			
-        </ul>
+        	</ul>
 		
-	</div>
+	</logNav>
+	
+	</logBody>
 
-    <div id="log">
+		<menu>
+		
+			<p>Recipe Search</p>
 
-        <div id="logMenu">
+			<ul>Extras
 
-            <p>Recipe Search</p>
+				<li>Favorites</li>
 
-            <ul>Extras
+			</ul>
 
-                <li>Favorites</li>
+			<p>Recipe Level</p>
 
-            </ul>
+			<button>Recipes</button><button>Special</button>
 
-            <p>Recipe Level</p>
+			<ul id="recipeLevel">
 
-            <button>Recipes</button><button>Special</button>
+			</ul>
+		
+		</menu>
+		
+		<list>
+		
+		</list>
+		
+		<listing>
+		
+		</listing>
+		
+	</logBody>
 
-            <ul id="recipeLevel">
-
-            </ul>
-
-        </div>
-
-        <div id="recipeList">
-
-        </div>
-
-        <div id="recipeMats">
-
-        </div>
-
-    </div>
-
-</div>
+</log>
