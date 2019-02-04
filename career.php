@@ -24,7 +24,7 @@
 		
 	</logNav>
 	
-	</logBody>
+	<logBody>
 
 		<menu>
 		
