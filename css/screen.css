@@ -15,6 +15,33 @@ header {
 	flex-direction: row;
 }
 
+header {
+    grid-column: 1 / 3;
+		grid-row: 1 / 1;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+    justify-content: space-between;
+}
+
+    header ul {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    header li {
+        display: inline-block;
+    }
+
+    header li:after {
+        content: "\00B7";
+    }
+
+    header li:last-of-type:after {
+        content: none;
+    }
+
 main {
 	overflow: auto;
 	grid-column: 1 / 3;
@@ -29,16 +56,16 @@ footer {
 log {
 	display: grid;
 	grid-template-columns: auto auto auto;
-	grid-template-rows: auto auto auto auto;
+	grid-template-rows: auto auto auto auto auto;
 }
 
 logheader {
-	grid-column: 1 / 3;
-	grid-row: 1 / 1;
+	grid-column: auto;
+	grid-row: auto;
 }
 
 lognav {
-	grid-column: 1 / 3;
+	grid-column: auto;
 	grid-row: 2 / 2;
 }
 
@@ -48,13 +75,24 @@ lognav {
 }
 
 logbody {
-	grid-column: 1 / 3;
-	grid-row: 3 / 3;
+	grid-column: auto;
+	grid-row: 3 / 5;
 	display: flex;
 	flex-direction: row;
 }
 
-logfooter {
+list {
+	grid-column: 2 / 2;
+	grid-row: 3 / 4;
+}
+
+characteristics {
 	grid-column: 2 / 2;
 	grid-row: 4 / 4;
+}
+
+logfooter {
+	background: #555;
+	grid-column: 1 / 3;
+	grid-row: 5 / 5;
 }
