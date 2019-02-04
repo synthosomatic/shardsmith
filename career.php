@@ -20,7 +20,7 @@
 			<li><button type="button" class="job" value="15" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Culinarian.png"/></button></li>
 			<li><button type="button" class="job" value="15">Search</button></li>
 			
-        	</ul>
+		</ul>
 		
 	</logNav>
 	
