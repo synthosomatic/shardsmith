@@ -44,32 +44,33 @@ main {
     overflow: auto;
 }
 
-#craftingLog {
+log {
     height: 50em;
     width: 70.1875em;
     margin: 2em auto;
 }
 
-#jobList {
+logHeader,logNav {
     display: flex;
     flex: 1 0 auto;
-    flex-direction: column;
 }
 
-    #jobList p {
+    logHeader {
+            flex-direction: column;
+    }
+
+    logHeader p {
         width: auto;
         display: flex;
         justify-content: space-between;
     }
 
-#jobs {
-    display: flex;
-    flex: 1 0 auto;
+logNav {
     flex-direction: row;
     padding-top: 0.3125em;
 }
 
-#log {
+logBody {
     display: flex;
     flex: 1 0 auto;
     flex-direction: row;
