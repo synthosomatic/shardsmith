@@ -50,27 +50,27 @@ log {
     margin: 2em auto;
 }
 
-logHeader,logNav {
+logheader,lognav {
     display: flex;
     flex: 1 0 auto;
 }
 
-    logHeader {
+    logheader {
             flex-direction: column;
     }
 
-    logHeader p {
+    logheader p {
         width: auto;
         display: flex;
         justify-content: space-between;
     }
 
-logNav {
+lognav {
     flex-direction: row;
     padding-top: 0.3125em;
 }
 
-logBody {
+logbody {
     display: flex;
     flex: 1 0 auto;
     flex-direction: row;
