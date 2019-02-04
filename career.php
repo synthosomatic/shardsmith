@@ -1,12 +1,12 @@
 <log>
 	
-	<logHeader>
+	<logheader>
 		
 		<p><span>Crafting Log</span><span>Level 51 Miner</span></p>
 
-	</logHeader>
+	</logheader>
 	
-	<logNav>
+	<lognav>
 	
 		<ul id="jobs">
 
@@ -22,9 +22,9 @@
 			
 		</ul>
 		
-	</logNav>
+	</lognav>
 	
-	<logBody>
+	<logbody>
 
 		<menu>
 		
@@ -54,6 +54,6 @@
 		
 		</listing>
 		
-	</logBody>
+	</logbody>
 
 </log>
