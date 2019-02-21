@@ -10,6 +10,8 @@ if ($_SERVER['REQUEST_URI']=='/') {
 	include 'join.php';
 } elseif ($_SERVER['REQUEST_URI']=='/test/') {
 	include 'test.php';
+} elseif ($_SERVER['REQUEST_URI']=='/eo/') {
+	include '../maginia-registrar/home.php';
 } else {
 	include '404.php';
 }
