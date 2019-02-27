@@ -1,23 +1,26 @@
+@import url("reset.css");
 @import url("style.css");
 
-ul, menu, dir {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0;
-}
-
 body {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    text-align: center;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto;
 }
 
 header {
-    display: flex;
-    align-items: center;
+	grid-column: 1 / 3;
+	grid-row: 1 / 1;
+	display: flex;
+	flex-direction: row;
+}
+
+header {
+    grid-column: 1 / 3;
+		grid-row: 1 / 1;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
     justify-content: space-between;
 }
 
@@ -40,41 +43,56 @@ header {
     }
 
 main {
-    height: 100vh;
-    overflow: auto;
+	overflow: auto;
+	grid-column: 1 / 3;
+	grid-row: 2 / 2;
 }
 
-#craftingLog {
-    height: 50em;
-    width: 70.1875em;
-    margin: 2em auto;
+footer {
+	grid-column: 1 / 3;
+	grid-row: 3 / 3;
 }
 
-#jobList {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
+log {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto auto auto;
 }
 
-    #jobList p {
-        width: auto;
-        display: flex;
-        justify-content: space-between;
-    }
+logheader {
+	grid-column: auto;
+	grid-row: auto;
+}
+
+lognav {
+	grid-column: auto;
+	grid-row: 2 / 2;
+}
 
 #jobs {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: row;
-    padding-top: 0.3125em;
+	display: flex;
+	flex-direction: row;
 }
 
-#log {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: row;
+logbody {
+	grid-column: auto;
+	grid-row: 3 / 5;
+	display: flex;
+	flex-direction: row;
 }
 
-li.levelRange {
-    font-size: 0.8125em;
+list {
+	grid-column: 2 / 2;
+	grid-row: 3 / 4;
+}
+
+characteristics {
+	grid-column: 2 / 2;
+	grid-row: 4 / 4;
+}
+
+logfooter {
+	background: #555;
+	grid-column: 1 / 3;
+	grid-row: 5 / 5;
 }

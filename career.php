@@ -1,10 +1,14 @@
-<div id="craftingLog">
+<log>
 
-    <div id="jobList">
+        <logheader>
 
-        <p><span>Crafting Log</span><span>Level 51 Miner</span></p>
+          <span>Crafting Log</span><span>Level 51 Miner</span>
 
-        <ul id="jobs">
+        </logheader>
+
+        <lognav>
+
+          <ul id="jobs">
 
             <li><button type="button" class="job" value="8" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Carpenter.png"/></button></li>
             <li><button type="button" class="job" value="9" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Blacksmith.png"/></button></li>
@@ -14,21 +18,21 @@
             <li><button type="button" class="job" value="13" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Weaver.png"/></button></li>
             <li><button type="button" class="job" value="14" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Alchemist.png"/></button></li>
             <li><button type="button" class="job" value="15" onclick="job=this.value;fetchData('https://xivapi.com/RecipeLevelTable?key=c01f6d205597419db64dd68c&columns=ID', getLevels)"><img src="https://storage.googleapis.com/shardsmith-210018.appspot.com/images/icons/icon_job_Culinarian.png"/></button></li>
-			<li><button type="button" class="job" value="15">Search</button></li>
-			
-        </ul>
-		
-	</div>
+            <li><button type="button" class="job" value="15">Search</button></li>
 
-    <div id="log">
+          </ul>
 
-        <div id="logMenu">
+        </lognav>
+
+        <logbody>
+
+          <menu>
 
             <p>Recipe Search</p>
 
             <ul>Extras
 
-                <li>Favorites</li>
+              <li>Favorites</li>
 
             </ul>
 
@@ -40,16 +44,28 @@
 
             </ul>
 
-        </div>
+          </menu>
 
-        <div id="recipeList">
+          <list>
 
-        </div>
+          </list>
+					
+					<characteristics>
+					
+					Characteristics
+					
+					</characteristics>
 
-        <div id="recipeMats">
+          <listing>
 
-        </div>
+          </listing>
 
-    </div>
+        </logbody>
+				
+				<logfooter>
+				
+				FOOTER TEST
+				
+				</logfooter>
 
-</div>
+      </log>
