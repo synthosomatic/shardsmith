@@ -103,12 +103,27 @@ function getRecipeMaterials(xhttp) {
   var rawData = xhttp.response;
   var materials = "";
   
-  for (i = 0; i < rawData.Results.length; i++) {
+  var ItemIngredient0 = rawData.ItemIngredient0['Name'];
+  var ItemIngredient1 = rawData.ItemIngredient1['Name'];
+  var ItemIngredient2 = rawData.ItemIngredient2['Name'];
+  var ItemIngredient3 = rawData.ItemIngredient3['Name'];
+  var ItemIngredient4 = rawData.ItemIngredient4['Name'];
+  var ItemIngredient5 = rawData.ItemIngredient5['Name'];
+  var ItemIngredient6 = rawData.ItemIngredient6['Name'];
+  var ItemIngredient7 = rawData.ItemIngredient7['Name'];
+  var ItemIngredient8 = rawData.ItemIngredient8['Name'];
+  var ItemIngredient9 = rawData.ItemIngredient9['Name'];
+  var AmountIngredient0 = rawData['AmountIngredient0'];
+  var AmountIngredient1 = rawData['AmountIngredient1'];
+  var AmountIngredient2 = rawData['AmountIngredient2'];
+  var AmountIngredient3 = rawData['AmountIngredient3'];
+  var AmountIngredient4 = rawData['AmountIngredient4'];
+  var AmountIngredient5 = rawData['AmountIngredient5'];
+  var AmountIngredient6 = rawData['AmountIngredient6'];
+  var AmountIngredient7 = rawData['AmountIngredient7'];
+  var AmountIngredient8 = rawData['AmountIngredient8'];
+  var AmountIngredient9 = rawData['AmountIngredient9'];
     
-    var name = rawData.Results[i]['ItemIngredient0']['Name'];
-    
-    listing.innerHTML = materials += name;
-    
-  }
+  listing.innerHTML = materials += "<p>" + ItemIngredient0 + AmountIngredient0 + "</p>" + "<p>" + ItemIngredient1 + AmountIngredient1 + "</p>" + "<p>" + ItemIngredient2 + AmountIngredient2 + "</p>" + "<p>" + ItemIngredient3 + AmountIngredient3 + "</p>" + "<p>" + ItemIngredient4 + AmountIngredient4 + "</p>" + "<p>" + ItemIngredient5 + AmountIngredient5 + "</p>" + "<p>" + ItemIngredient6 + AmountIngredient6 + "</p>" + "<p>" + ItemIngredient7 + AmountIngredient7 + "</p>" + "<p>" + ItemIngredient8 + AmountIngredient8 + "</p>" + "<p>" + ItemIngredient9 + AmountIngredient9 + "</p>";
   
 }
