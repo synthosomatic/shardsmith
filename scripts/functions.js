@@ -25,6 +25,11 @@ function getLevels(xhttp) {
   while (list.hasChildNodes()) {
     list.removeChild(list.firstChild);
   }
+  var listing = document.getElementsByTagName("listing")[0];
+  // As long as <ul> has a child node, remove it
+  while (listing.hasChildNodes()) {
+    listing.removeChild(listing.firstChild);
+  }
 
   var rawData = xhttp.response;
   var data = [];
@@ -60,11 +65,16 @@ function getLevels(xhttp) {
 
 // Get recipes for specified job
 function getRecipes(xhttp) {
-  // Get the <ul> element with id="recipeLevel"
+
   var list = document.getElementsByTagName("list")[0];
-  // As long as <ul> has a child node, remove it
+  // As long as list has a child node, remove it
   while (list.hasChildNodes()) {
     list.removeChild(list.firstChild);
+  }
+  var listing = document.getElementsByTagName("listing")[0];
+  // As long as listing has a child node, remove it
+  while (listing.hasChildNodes()) {
+    listing.removeChild(listing.firstChild);
   }
 
   var rawData = xhttp.response;
@@ -80,4 +90,25 @@ function getRecipes(xhttp) {
 
   }
 
+}
+
+function getRecipeMaterials(xhttp) {
+  
+  var listing = document.getElementsByTagName("listing")[0];
+  // As long as listing has a child node, remove it
+  while (listing.hasChildNodes()) {
+    listing.removeChild(listing.firstChild);
+  }
+  
+  var rawData = xhttp.response;
+  var materials = "";
+  
+  for (i = 0; i < rawData.Results.length; i++) {
+    
+    var name = rawData.Results[i]['ItemIngredient0']['Name'];
+    
+    listing.innerHTML = materials += name;
+    
+  }
+  
 }
