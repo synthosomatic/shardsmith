@@ -20,6 +20,11 @@ function getLevels(xhttp) {
   while (recipeLevels.hasChildNodes()) {
     recipeLevels.removeChild(recipeLevels.firstChild);
   }
+  var list = document.getElementsByTagName("list")[0];
+  // As long as <ul> has a child node, remove it
+  while (list.hasChildNodes()) {
+    list.removeChild(list.firstChild);
+  }
 
   var rawData = xhttp.response;
   var data = [];
