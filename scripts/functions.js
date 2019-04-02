@@ -127,3 +127,15 @@ function getRecipeMaterials(xhttp) {
   listing.innerHTML = materials += "<p>" + ItemIngredient0 + AmountIngredient0 + "</p>" + "<p>" + ItemIngredient1 + AmountIngredient1 + "</p>" + "<p>" + ItemIngredient2 + AmountIngredient2 + "</p>" + "<p>" + ItemIngredient3 + AmountIngredient3 + "</p>" + "<p>" + ItemIngredient4 + AmountIngredient4 + "</p>" + "<p>" + ItemIngredient5 + AmountIngredient5 + "</p>" + "<p>" + ItemIngredient6 + AmountIngredient6 + "</p>" + "<p>" + ItemIngredient7 + AmountIngredient7 + "</p>" + "<p>" + ItemIngredient8 + AmountIngredient8 + "</p>" + "<p>" + ItemIngredient9 + AmountIngredient9 + "</p>";
   
 }
+
+function getQuests(xhttp) {
+	var quests = "";
+	var rawData = xhttp.response;
+	
+	for (i = 0; i < rawData.Results.length; i++) {
+		var id = rawData.Results[i]['ID'];
+		var name = rawData.Results[i]['Name'];
+		
+		document.getElementsByTagName("quests")[0].InnerHTML = quests += "<p>" + id + " " + name + "</p>";
+	}
+}
