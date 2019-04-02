@@ -131,11 +131,12 @@ function getRecipeMaterials(xhttp) {
 function getQuests(xhttp) {
 	var quests = "";
 	var rawData = xhttp.response;
+	var questlist = document.getElementsByTagName("quests")[0];
 	
 	for (i = 0; i < rawData.Results.length; i++) {
 		var id = rawData.Results[i]['ID'];
 		var name = rawData.Results[i]['Name'];
 		
-		document.getElementsByTagName("quests")[0].InnerHTML = quests += "<p>" + id + " " + name + "</p>";
+		questlist.InnerHTML = quests += "<p>" + id + " " + name + "</p>";
 	}
 }
