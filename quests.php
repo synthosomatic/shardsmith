@@ -7,20 +7,32 @@ function getJournalSections(xhttp) {
 	
 	for (i = 0; i < rawData.Results.length; i++) {
 		
+		var id = rawData.Results[i]['ID'];
 		var name = rawData.Results[i]['Name'];
 		
-		document.getElementsByTagName("journalsection")[0].innerHTML = journalSections += "<button>" + name + "</button>";
+		document.getElementsByTagName("journalSection")[0].innerHTML = journalSections += "<button onclick="fetchData('https://xivapi.com/JournalSection/' + id + '?key=c01f6d205597419db64dd68c', getJournalCategories);">" + name + "</button>";
 	
 	}
 
 }
 	
-
+function getJournalCategories(xhttp) {
+	
+	var journalCategories = "";
+	var rawData = xhttp.response;
+	
+	for (i = 0; i < rawData.GameContentLinks.JournalCategory.JournalSection.length; i++) {
+		
+		var id = journalCategories[i];
+		
+		document.getElementById("journalCategory").innerHTML = journalCategories += "<option value='" + id + "'>" + id + "</option>";
+		
+	}
+	
+}
   
 </script>
   
-<button onclick="fetchData('https://xivapi.com/JournalSection?key=c01f6d205597419db64dd68c', getJournalSections)">Quests</button>
-
 <journal>
   
   <journalHeader>
@@ -32,18 +44,19 @@ function getJournalSections(xhttp) {
   
   <journalNav>
     
-    <journalsection>
-	    <script>
-		    fetchData('https://xivapi.com/JournalSection?key=c01f6d205597419db64dd68c', getJournalSections);
+    <journalSection>
+	
+		<script>
+				fetchData('https://xivapi.com/JournalSection?key=c01f6d205597419db64dd68c', getJournalSections);
 		</script>
       
-      <span></span>
+     	<span></span>
       
       <search></search>
       
-    </journalsection>
+    </journalSection>
     
-    <journalCategory></journalCategory>
+    <select id="journalCategory"></select>
     
   </journalNav>
   
