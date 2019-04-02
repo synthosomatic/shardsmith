@@ -9,7 +9,7 @@ function getJournalSections(xhttp) {
 		
 		var name = rawData.Results[i]['Name'];
 		
-		document.getElementsByTagName("journalSection").children[0].innerHTML = journalSections += "<button>" + name + "</button>";
+		document.getElementsByTagName("journalSection").innerHTML = journalSections += "<button>" + name + "</button>";
 	
 	}
 
