@@ -14,6 +14,8 @@ function getJournalSections(xhttp) {
 	}
 
 }
+	
+
   
 </script>
   
@@ -30,7 +32,10 @@ function getJournalSections(xhttp) {
   
   <journalNav>
     
-    <journalsection onload="fetchData('https://xivapi.com/JournalSection?key=c01f6d205597419db64dd68c', getJournalSections)">
+    <journalsection>
+	    <script>
+		    fetchData('https://xivapi.com/JournalSection?key=c01f6d205597419db64dd68c', getJournalSections);
+		</script>
       
       <span></span>
       
