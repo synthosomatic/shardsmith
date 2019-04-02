@@ -21,7 +21,7 @@ function getQuests(xhttp) {
 		var id = rawData.Results[i]['ID'];
 		var name = rawData.Results[i]['Name'];
 		
-		document.getElementsByTagName("quests")[0].InnerHTML = quests += id + name;
+		document.getElementsByTagName("quests")[0].InnerHTML = quests += "<p>" + id + " " + name + "</p>";
 	}
 }
 </script>
