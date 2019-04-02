@@ -137,6 +137,6 @@ function getQuests(xhttp) {
 		var id = rawData.Results[i]['ID'];
 		var name = rawData.Results[i]['Name'];
 		
-		questlist.InnerHTML = quests += "<p>" + id + " " + name + "</p>";
+		questlist.innerHTML = quests += "<p>" + id + " " + name + "</p>";
 	}
 }
