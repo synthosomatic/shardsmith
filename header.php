@@ -42,7 +42,7 @@
 			<a href="/career/">Career</a>
 		</li>
 		<li>
-			<a href"/quests/">Quest Tracker</a>
+			<a href="/quests/">Quest Tracker</a>
 		</li>
 <!--			<li>
 			<a href="/join/">Create an Account</a>
