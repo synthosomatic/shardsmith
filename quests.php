@@ -21,7 +21,7 @@ function getJournalCategories(xhttp) {
 	var journalCategories = [];
 	var rawData = xhttp.response;
 	
-	for (i = 0; i < rawData.GameContentLinks.JournalCategory.JournalSection.length; i++) {
+	for (i in rawData.GameContentLinks.JournalCategory.JournalSection) {
 		
 		var id = journalCategories[i];
 		
