@@ -10,7 +10,7 @@ function getJournalSections(xhttp) {
 		var id = rawData.Results[i]['ID'];
 		var name = rawData.Results[i]['Name'];
 		
-		document.getElementsByTagName("journalSection")[0].innerHTML = journalSections += "<button onclick="fetchData('https://xivapi.com/JournalSection/' + id + '?key=c01f6d205597419db64dd68c', getJournalCategories);">" + name + "</button>";
+		document.getElementsByTagName("journalSection")[0].innerHTML = journalSections += "<button onclick='fetchData('https://xivapi.com/JournalSection/" + id + "?key=c01f6d205597419db64dd68c', getJournalCategories);'>" + name + "</button>";
 	
 	}
 
