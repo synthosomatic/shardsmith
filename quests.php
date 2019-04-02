@@ -30,7 +30,7 @@ function getJournalSections(xhttp) {
   
   <journalNav>
     
-    <journalsection>
+    <journalsection onload="fetchData('https://xivapi.com/JournalSection?key=c01f6d205597419db64dd68c', getJournalSections)">
       
       <span></span>
       
