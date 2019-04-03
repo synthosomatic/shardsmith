@@ -21,7 +21,7 @@
       
     </journalSection>
     
-    <select id="journalCategory"></select>
+    <journalCategory></journalCategory>
     
   </journalNav>
   
