@@ -153,7 +153,7 @@ function getJournalCategories(xhttp) {
 		
 		var id = journalCategories[i];
 		
-		document.getElementById("journalCategory").innerHTML = journalCategories += "<option value=\"" + id + "\">" + id + "</option>";
+		document.getElementById("journalCategory").innerHTML = journalCategories += "<p>" + id + "</p>";
 		
 	}
 	
