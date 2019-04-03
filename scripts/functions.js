@@ -146,15 +146,9 @@ function getJournalSections(xhttp) {
 	
 function getJournalCategories(xhttp) {
 	
-	var journalCategories = [];
 	var rawData = xhttp.response;
-	
-	for (i in rawData.GameContentLinks.JournalCategory.JournalSection) {
+	var journalCategory = rawData.GameContentLinks.JournalCategory.JournalSection;
 		
-		var id = journalCategories[i];
-		
-		document.getElementsByTagName("journalCategory")[0].innerHTML = journalCategories += "<p>" + id + "</p>";
-		
-	}
+	document.getElementsByTagName("journalCategory")[0].innerHTML = "<p>" + journalCategory + "</p>";
 	
 }
