@@ -1,1 +1,24 @@
-
+{
+	Adventurers: [
+		
+		{
+			Adventurer: "Naveed",
+			Level: 70,
+			Class: "Attack",
+			Rarity: 5,
+			Rank: 5,
+			Element: "Flame",
+			Weapon: "Sword"
+		},
+		{
+			Adventurer: "",
+			Level: 0,
+			Class: "",
+			Rarity: 0,
+			Rank: 0,
+			Element: "",
+			Weapon: ""
+		}
+		
+	]
+}
