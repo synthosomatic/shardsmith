@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_URI']=='/') {
 } elseif ($_SERVER['REQUEST_URI']=='/test/') {
 	include 'test.php';
 } elseif ($_SERVER['REQUEST_URI']=='/halidom/') {
-	include '../halidom/home.php';
+	include '../halidom/home.html';
 } elseif ($_SERVER['REQUEST_URI']=='/maginia/') {
 	include '../maginia/home.php';
 } else {
