@@ -44,7 +44,10 @@
 		<li>
 			<a href="/quests/">Quest Tracker</a>
 		</li>
-<!--			<li>
+		<li>
+			<a href="/alberia/">New Alberia Census</a>
+		</li>
+<!--		<li>
 			<a href="/join/">Create an Account</a>
 		</li>
 		<li>
