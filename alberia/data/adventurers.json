@@ -1,9 +1,11 @@
 [
 	{
+		"ID":110266,
+		"Variation":01,
 		"Adventurer":"Naveed",
 		"Level":70,
 		"Class":"Attack",
-		"Rarity":5,
+		"Rarity":"r05",
 		"Rank":5,
 		"Element":"Flame",
 		"Weapon":"Sword",
