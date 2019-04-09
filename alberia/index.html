@@ -1,1 +1,20 @@
 Buncha stuff and things because this is a home page
+
+<script>
+		document.addEventListener("DOMContentLoaded", function (event) {
+			
+      xhttp = new XMLHttpRequest();
+				xhttp.responseType = "json";
+				xhttp.onreadystatechange = function () {
+					if (xhttp.readyState === 4 && xhttp.status === 200) {
+						document.getElementsByTagName("content")[0].innerHTML = xhttp.response;
+					}
+				};
+				xhttp.open("GET", "alberia/data/adventurers.json", true);
+				xhttp.send();
+			}
+                              
+		});
+</script>
+
+<content></content>
