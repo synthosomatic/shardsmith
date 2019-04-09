@@ -12,8 +12,8 @@ if ($_SERVER['REQUEST_URI']=='/') {
 	include 'join.php';
 } elseif ($_SERVER['REQUEST_URI']=='/test/') {
 	include 'test.php';
-} elseif ($_SERVER['REQUEST_URI']=='/halidom/') {
-	include '../halidom/index.html';
+} elseif ($_SERVER['REQUEST_URI']=='/alberia/') {
+	include '../alberia/index.html';
 } elseif ($_SERVER['REQUEST_URI']=='/maginia/') {
 	include '../maginia/home.php';
 } else {
