@@ -13,9 +13,9 @@ if ($_SERVER['REQUEST_URI']=='/') {
 } elseif ($_SERVER['REQUEST_URI']=='/test/') {
 	include 'test.php';
 } elseif ($_SERVER['REQUEST_URI']=='/alberia/') {
-	include '../alberia/index.html';
+	include '/alberia/index.html';
 } elseif ($_SERVER['REQUEST_URI']=='/maginia/') {
-	include '../maginia/home.php';
+	include '/maginia/home.php';
 } else {
 	include '404.php';
 }
