@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function (event) {
+//document.addEventListener("DOMContentLoaded", function (event) {
 	
 	// Get data from API
 	function fetchData(url, cFunction) {
@@ -16,22 +16,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 	// Get level IDs from RecipeLevelTable
 	function getLevels(xhttp) {
-	  // Get the <ul> element with id="recipeLevel"
 	  var recipeLevels = document.getElementById("recipeLevel");
-	  // As long as <ul> has a child node, remove it
-	  while (recipeLevels.hasChildNodes()) {
-	    recipeLevels.removeChild(recipeLevels.firstChild);
-	  }
-	  var list = document.getElementsByTagName("list")[0];
-	  // As long as <ul> has a child node, remove it
-	  while (list.hasChildNodes()) {
-	    list.removeChild(list.firstChild);
-	  }
+		recipeLevels.innerHTML = "";
+		var listings = document.getElementsByTagName("listings")[0];
+	 	listings.innerHTML = "";
 	  var listing = document.getElementsByTagName("listing")[0];
-	  // As long as <ul> has a child node, remove it
-	  while (listing.hasChildNodes()) {
-	    listing.removeChild(listing.firstChild);
-	  }
+	 	listing.innerHTML = "";
 
 	  var rawData = xhttp.response;
 	  var data = [];
@@ -59,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	    var lower = levels[i];
 	    var upper = levels[i] + 4;
 
-	    document.getElementById("recipeLevel").innerHTML = levelRanges += "<li><button type=\"button\" class=\"levelRange\" onclick=\"fetchData('https://xivapi.com/search?key=c01f6d205597419db64dd68c&indexes=Recipe&filters=ClassJob.ID=" + job + ",SecretRecipeBookTargetID=0,ItemResult.ItemRepairTargetID>0,ItemResult.ItemSearchCategoryTargetID>0,RecipeLevelTable.ClassJobLevel>=" + lower + ",RecipeLevelTable.ClassJobLevel<=" + upper + "', getRecipes)\">" + lower + "-" + upper + "</button></li>" + "<br />";
+	    document.getElementById("recipeLevel").innerHTML = levelRanges += "<li class=\"levelRange\" onclick=\"fetchData('https://xivapi.com/search?key=c01f6d205597419db64dd68c&indexes=Recipe&filters=ClassJob.ID=" + job + ",SecretRecipeBookTargetID=0,ItemResult.ItemRepairTargetID>0,ItemResult.ItemSearchCategoryTargetID>0,RecipeLevelTable.ClassJobLevel>=" + lower + ",RecipeLevelTable.ClassJobLevel<=" + upper + "', getRecipes)\">" + lower + "-" + upper + "</li>" + "<br />";
 
 	  }
 
@@ -68,27 +58,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	// Get recipes for specified job
 	function getRecipes(xhttp) {
 
-	  var list = document.getElementsByTagName("list")[0];
-	  // As long as list has a child node, remove it
-	  while (list.hasChildNodes()) {
-	    list.removeChild(list.firstChild);
-	  }
+		var listings = document.getElementsByTagName("listings")[0];
+		listings.innerHTML = "";
 	  var listing = document.getElementsByTagName("listing")[0];
-	  // As long as listing has a child node, remove it
-	  while (listing.hasChildNodes()) {
-	    listing.removeChild(listing.firstChild);
-	  }
+		listing.innerHTML = "";
 
 	  var rawData = xhttp.response;
-
-	  var listings = "";
 
 	  for (i = 0; i < rawData.Results.length; i++) {
 
 	    var id = rawData.Results[i]['ID'];
 	    var name = rawData.Results[i]['Name'];
 
-	    list.innerHTML = listings += "<li><button type=\"button\" class=\"recipe\" onclick=\"fetchData('https://xivapi.com/recipe/" + id + "/?key=c01f6d205597419db64dd68c', getRecipeMaterials)\">" + name + "</button></li>" + "<br />";
+		  listings.insertAdjacentHTML("afterbegin","<li class=\"recipe\" onclick=\"fetchData('https://xivapi.com/recipe/" + id + "/?key=c01f6d205597419db64dd68c', getRecipeMaterials)\">" + name + "</li>" + "<br />");
 
 	  }
 
@@ -97,10 +79,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	function getRecipeMaterials(xhttp) {
 
 	  var listing = document.getElementsByTagName("listing")[0];
-	  // As long as listing has a child node, remove it
-	  while (listing.hasChildNodes()) {
-	    listing.removeChild(listing.firstChild);
-	  }
+		listing.innerHTML = "";
 
 	  var rawData = xhttp.response;
 	  var materials = "";
@@ -155,4 +134,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 	}
 	
-});
+//});

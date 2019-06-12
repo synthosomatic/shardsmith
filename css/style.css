@@ -59,8 +59,12 @@ footer {
     box-shadow: 0 -0.125em 0.9375em #000;
 }
 
-#craftingLog {
+log {
     background: #313031;
+}
+
+logfooter {
+	background: #555;
 }
 
 #jobs {
